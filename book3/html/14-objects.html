@@ -80,7 +80,7 @@ print(&#39;Non-US Floor Number is&#39;,wf)
 # Code: http://www.py4e.com/code3/elev.py</code></pre>
 <p>If we think a bit more about this program, there is the “outside world” and the program. The input and output aspects are where the program interacts with the outside world. Within the program we have code and data to accomplish the task the program is designed to solve.</p>
 <figure>
-<img src="../images/program.svg" alt="" /><figcaption>A Program</figcaption>
+<img src="../../images/program.svg" alt="" /><figcaption>A Program</figcaption>
 </figure>
 <p>One way to think about object-oriented programming is that it separates our program into multiple “zones.” Each zone contains some code and data (like a program) and has well defined interactions with the outside world and the other zones within the program.</p>
 <p>If we look back at the link extraction application where we used the BeautifulSoup library, we can see a program that is constructed by connecting different objects together to accomplish a task:</p>
@@ -111,17 +111,17 @@ for tag in tags:
 <p>We read the URL into a string and then pass that into <code>urllib</code> to retrieve the data from the web. The <code>urllib</code> library uses the <code>socket</code> library to make the actual network connection to retrieve the data. We take the string that <code>urllib</code> returns and hand it to BeautifulSoup for parsing. BeautifulSoup makes use of the object <code>html.parser</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and returns an object. We call the <code>tags()</code> method on the returned object that returns a dictionary of tag objects. We loop through the tags and call the <code>get()</code> method for each tag to print out the <code>href</code> attribute.</p>
 <p>We can draw a picture of this program and how the objects work together.</p>
 <figure>
-<img src="../images/program-oo.svg" alt="" /><figcaption>A Program as Network of Objects</figcaption>
+<img src="../../images/program-oo.svg" alt="" /><figcaption>A Program as Network of Objects</figcaption>
 </figure>
 <p>The key here is not to understand perfectly how this program works but to see how we build a network of interacting objects and orchestrate the movement of information between the objects to create a program. It is also important to note that when you looked at that program several chapters back, you could fully understand what was going on in the program without even realizing that the program was “orchestrating the movement of data between objects.” It was just lines of code that got the job done.</p>
 <h2 id="subdividing-a-problem">Subdividing a problem</h2>
 <p>One of the advantages of the object-oriented approach is that it can hide complexity. For example, while we need to know how to use the <code>urllib</code> and BeautifulSoup code, we do not need to know how those libraries work internally. This allows us to focus on the part of the problem we need to solve and ignore the other parts of the program.</p>
 <figure>
-<img src="../images/program-oo-code.svg" alt="" /><figcaption>Ignoring Detail When Using an Object</figcaption>
+<img src="../../images/program-oo-code.svg" alt="" /><figcaption>Ignoring Detail When Using an Object</figcaption>
 </figure>
 <p>This ability to focus exclusively on the part of a program that we care about and ignore the rest is also helpful to the developers of the objects that we use. For example, the programmers developing BeautifulSoup do not need to know or care about how we retrieve our HTML page, what parts we want to read, or what we plan to do with the data we extract from the web page.</p>
 <figure>
-<img src="../images/program-oo-bs4.svg" alt="" /><figcaption>Ignoring Detail When Building an Object</figcaption>
+<img src="../../images/program-oo-bs4.svg" alt="" /><figcaption>Ignoring Detail When Building an Object</figcaption>
 </figure>
 <h2 id="our-first-python-object">Our first Python object</h2>
 <p>At a basic level, an object is simply some code plus data structures that are smaller than a whole program. Defining a function allows us to store a bit of code and give it a name and then later invoke that code using the name of the function.</p>
@@ -309,31 +309,31 @@ print (list.__getitem__(stuff,0))
 <h2 id="glossary">Glossary</h2>
 <dl>
 <dt>attribute</dt>
-<dd>A variable that is part of a class. 
+<dd>A variable that is part of a class.
 </dd>
 <dt>class</dt>
-<dd>A template that can be used to construct an object. Defines the attributes and methods that will make up the object. 
+<dd>A template that can be used to construct an object. Defines the attributes and methods that will make up the object.
 </dd>
 <dt>child class</dt>
-<dd>A new class created when a parent class is extended. The child class inherits all of the attributes and methods of the parent class. 
+<dd>A new class created when a parent class is extended. The child class inherits all of the attributes and methods of the parent class.
 </dd>
 <dt>constructor</dt>
-<dd>An optional specially named method (<code>__init__</code>) that is called at the moment when a class is being used to construct an object. Usually this is used to set up initial values for the object. 
+<dd>An optional specially named method (<code>__init__</code>) that is called at the moment when a class is being used to construct an object. Usually this is used to set up initial values for the object.
 </dd>
 <dt>destructor</dt>
-<dd>An optional specially named method (<code>__del__</code>) that is called at the moment just before an object is destroyed. Destructors are rarely used. 
+<dd>An optional specially named method (<code>__del__</code>) that is called at the moment just before an object is destroyed. Destructors are rarely used.
 </dd>
 <dt>inheritance</dt>
-<dd>When we create a new class (child) by extending an existing class (parent). The child class has all the attributes and methods of the parent class plus additional attributes and methods defined by the child class. 
+<dd>When we create a new class (child) by extending an existing class (parent). The child class has all the attributes and methods of the parent class plus additional attributes and methods defined by the child class.
 </dd>
 <dt>method</dt>
-<dd>A function that is contained within a class and the objects that are constructed from the class. Some object-oriented patterns use ‘message’ instead of ‘method’ to describe this concept.  
+<dd>A function that is contained within a class and the objects that are constructed from the class. Some object-oriented patterns use ‘message’ instead of ‘method’ to describe this concept.
 </dd>
 <dt>object</dt>
-<dd>A constructed instance of a class. An object contains all of the attributes and methods that were defined by the class. Some object-oriented documentation uses the term ‘instance’ interchangeably with ‘object’. 
+<dd>A constructed instance of a class. An object contains all of the attributes and methods that were defined by the class. Some object-oriented documentation uses the term ‘instance’ interchangeably with ‘object’.
 </dd>
 <dt>parent class</dt>
-<dd>The class which is being extended to create a new child class. The parent class contributes all of its methods and attributes to the new child class. 
+<dd>The class which is being extended to create a new child class. The parent class contributes all of its methods and attributes to the new child class.
 </dd>
 </dl>
 <section class="footnotes" role="doc-endnotes">

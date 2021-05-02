@@ -31,7 +31,7 @@
 <h2 id="database-concepts">Database concepts</h2>
 <p>When you first look at a database it looks like a spreadsheet with multiple sheets. The primary data structures in a database are: <em>tables</em>, <em>rows</em>, and <em>columns</em>.</p>
 <figure>
-<img src="../images/relational.svg" alt="" /><figcaption>Relational Databases</figcaption>
+<img src="../../images/relational.svg" alt="" /><figcaption>Relational Databases</figcaption>
 </figure>
 <p>In technical descriptions of relational databases the concepts of table, row, and column are more formally referred to as <em>relation</em>, <em>tuple</em>, and <em>attribute</em>, respectively. We will use the less formal terms in this chapter.</p>
 <h2 id="database-browser-for-sqlite">Database Browser for SQLite</h2>
@@ -62,7 +62,7 @@ conn.close()
 <p>The <code>connect</code> operation makes a “connection” to the database stored in the file <code>music.sqlite</code> in the current directory. If the file does not exist, it will be created. The reason this is called a “connection” is that sometimes the database is stored on a separate “database server” from the server on which we are running our application. In our simple examples the database will just be a local file in the same directory as the Python code we are running.</p>
 <p>A <em>cursor</em> is like a file handle that we can use to perform operations on the data stored in the database. Calling <code>cursor()</code> is very similar conceptually to calling <code>open()</code> when dealing with text files.</p>
 <figure>
-<img src="../images/cursor.svg" alt="" /><figcaption>A Database Cursor</figcaption>
+<img src="../../images/cursor.svg" alt="" /><figcaption>A Database Cursor</figcaption>
 </figure>
 <p>Once we have the cursor, we can begin to execute commands on the contents of the database using the <code>execute()</code> method.</p>
 <p>Database commands are expressed in a special language that has been standardized across many different database vendors to allow us to learn a single database language. The database language is called <em>Structured Query Language</em> or <em>SQL</em> for short.</p>
@@ -98,7 +98,7 @@ cur.close()
 # Code: http://www.py4e.com/code3/db2.py</code></pre>
 <p>First we <code>INSERT</code> two rows into our table and use <code>commit()</code> to force the data to be written to the database file.</p>
 <figure>
-<img src="../images/tracks.svg" alt="" /><figcaption>Rows in a Table</figcaption>
+<img src="../../images/tracks.svg" alt="" /><figcaption>Rows in a Table</figcaption>
 </figure>
 <p>Then we use the <code>SELECT</code> command to retrieve the rows we just inserted from the table. On the <code>SELECT</code> command, we indicate which columns we would like <code>(title, plays)</code> and indicate which table we want to retrieve the data from. After we execute the <code>SELECT</code> statement, the cursor is something we can loop through in a <code>for</code> statement. For efficiency, the cursor does not read all of the data from the database when we execute the <code>SELECT</code> statement. Instead, the data is read on demand as we loop through the rows in the <code>for</code> statement.</p>
 <p>The output of the program is as follows:</p>
@@ -601,34 +601,34 @@ Connections for id=2:
 <h2 id="glossary">Glossary</h2>
 <dl>
 <dt>attribute</dt>
-<dd>One of the values within a tuple. More commonly called a “column” or “field”. 
+<dd>One of the values within a tuple. More commonly called a “column” or “field”.
 </dd>
 <dt>constraint</dt>
-<dd>When we tell the database to enforce a rule on a field or a row in a table. A common constraint is to insist that there can be no duplicate values in a particular field (i.e., all the values must be unique). 
+<dd>When we tell the database to enforce a rule on a field or a row in a table. A common constraint is to insist that there can be no duplicate values in a particular field (i.e., all the values must be unique).
 </dd>
 <dt>cursor</dt>
-<dd>A cursor allows you to execute SQL commands in a database and retrieve data from the database. A cursor is similar to a socket or file handle for network connections and files, respectively. 
+<dd>A cursor allows you to execute SQL commands in a database and retrieve data from the database. A cursor is similar to a socket or file handle for network connections and files, respectively.
 </dd>
 <dt>database browser</dt>
-<dd>A piece of software that allows you to directly connect to a database and manipulate the database directly without writing a program. 
+<dd>A piece of software that allows you to directly connect to a database and manipulate the database directly without writing a program.
 </dd>
 <dt>foreign key</dt>
-<dd>A numeric key that points to the primary key of a row in another table. Foreign keys establish relationships between rows stored in different tables. 
+<dd>A numeric key that points to the primary key of a row in another table. Foreign keys establish relationships between rows stored in different tables.
 </dd>
 <dt>index</dt>
-<dd>Additional data that the database software maintains as rows and inserts into a table to make lookups very fast.  
+<dd>Additional data that the database software maintains as rows and inserts into a table to make lookups very fast.
 </dd>
 <dt>logical key</dt>
-<dd>A key that the “outside world” uses to look up a particular row. For example in a table of user accounts, a person’s email address might be a good candidate as the logical key for the user’s data. 
+<dd>A key that the “outside world” uses to look up a particular row. For example in a table of user accounts, a person’s email address might be a good candidate as the logical key for the user’s data.
 </dd>
 <dt>normalization</dt>
-<dd>Designing a data model so that no data is replicated. We store each item of data at one place in the database and reference it elsewhere using a foreign key.  
+<dd>Designing a data model so that no data is replicated. We store each item of data at one place in the database and reference it elsewhere using a foreign key.
 </dd>
 <dt>primary key</dt>
-<dd>A numeric key assigned to each row that is used to refer to one row in a table from another table. Often the database is configured to automatically assign primary keys as rows are inserted. 
+<dd>A numeric key assigned to each row that is used to refer to one row in a table from another table. Often the database is configured to automatically assign primary keys as rows are inserted.
 </dd>
 <dt>relation</dt>
-<dd>An area within a database that contains tuples and attributes. More typically called a “table”. 
+<dd>An area within a database that contains tuples and attributes. More typically called a “table”.
 </dd>
 <dt>tuple</dt>
 <dd>A single entry in a database table that is a set of attributes. More typically called “row”.

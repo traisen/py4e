@@ -52,7 +52,7 @@ mysock.close()
 # Code: http://www.py4e.com/code3/socket1.py</code></pre>
 <p>First the program makes a connection to port 80 on the server <a href="http://www.py4e.com">www.py4e.com</a>. Since our program is playing the role of the “web browser”, the HTTP protocol says we must send the GET command followed by a blank line. <code>\r\n</code> signifies an EOL (end of line), so <code>\r\n\r\n</code> signifies nothing between two EOL sequences. That is the equivalent of a blank line.</p>
 <figure>
-<img src="../../images/socket.svg" alt="" /><figcaption>A Socket Connection</figcaption>
+<img src="../images/socket.svg" alt="" /><figcaption>A Socket Connection</figcaption>
 </figure>
 <p>Once we send that blank line, we write a loop that receives data in 512-character chunks from the socket and prints the data out until there is no more data to read (i.e., the recv() returns an empty string).</p>
 <p>The program produces the following output:</p>
@@ -426,19 +426,19 @@ Attrs: [(&#39;href&#39;, &#39;http://www.dr-chuck.com/page2.htm&#39;)]</code></p
 <h2 id="glossary">Glossary</h2>
 <dl>
 <dt>BeautifulSoup</dt>
-<dd>A Python library for parsing HTML documents and extracting data from HTML documents that compensates for most of the imperfections in the HTML that browsers generally ignore. You can download the BeautifulSoup code from <a href="http://www.crummy.com">www.crummy.com</a>.
+<dd>A Python library for parsing HTML documents and extracting data from HTML documents that compensates for most of the imperfections in the HTML that browsers generally ignore. You can download the BeautifulSoup code from <a href="http://www.crummy.com">www.crummy.com</a>. 
 </dd>
 <dt>port</dt>
-<dd>A number that generally indicates which application you are contacting when you make a socket connection to a server. As an example, web traffic usually uses port 80 while email traffic uses port 25.
+<dd>A number that generally indicates which application you are contacting when you make a socket connection to a server. As an example, web traffic usually uses port 80 while email traffic uses port 25. 
 </dd>
 <dt>scrape</dt>
-<dd>When a program pretends to be a web browser and retrieves a web page, then looks at the web page content. Often programs are following the links in one page to find the next page so they can traverse a network of pages or a social network.
+<dd>When a program pretends to be a web browser and retrieves a web page, then looks at the web page content. Often programs are following the links in one page to find the next page so they can traverse a network of pages or a social network. 
 </dd>
 <dt>socket</dt>
-<dd>A network connection between two applications where the applications can send and receive data in either direction.
+<dd>A network connection between two applications where the applications can send and receive data in either direction. 
 </dd>
 <dt>spider</dt>
-<dd>The act of a web search engine retrieving a page and then all the pages linked from a page and so on until they have nearly all of the pages on the Internet which they use to build their search index.
+<dd>The act of a web search engine retrieving a page and then all the pages linked from a page and so on until they have nearly all of the pages on the Internet which they use to build their search index. 
 </dd>
 </dl>
 <h2 id="exercises">Exercises</h2>
